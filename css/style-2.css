@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.contenedor {
+    background-color: #ddd;
+    font-size: 1.06em;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 70px 40px 7fr 70px;
+    grid-template-areas: 
+    'header header header'
+    'nav nav nav'
+    'section-1 section-2 ads'
+    'footer footer footer';
+}
+
+.contenedor>div {
+    border: .16px solid #aaa;
+    display: grid;
+    place-content: center;
+    gap: 10px;
+}
+
+.contenedor .header {
+    background-color: orangered;
+    grid-column: header;
+    color: aliceblue;
+}
+
+.contenedor .menu {
+    background-color: darkslategrey;
+    grid-column: nav;
+    color: aliceblue;
+}
+
+.contenedor .section-1 {
+    background-color: skyblue;
+    grid-column: section-1;
+    padding: 25px;
+}
+
+.contenedor .section-2 {
+    background-color: skyblue;
+    grid-column: section-2;
+    padding: 25px;
+}
+
+.contenedor .ads {
+    background-color: orangered;
+    grid-column: ads;
+    padding: 10px;
+}
+
+.contenedor .footer {
+    background-color: royalblue;
+    grid-column: footer;
+    color: aliceblue;
+}
+
+.ad-title {
+    color: #ddd;
+}
+
+.ad-content {
+    border: 1px dashed #aaa;
+    color: aliceblue;
+}
+
